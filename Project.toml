@@ -1,0 +1,7 @@
+name = "CIS3223"
+uuid = "6f309237-498e-4fb3-9be1-a9676aa83e84"
+authors = ["Eric Nguyen <tuk94307@temple.edu>"]
+version = "0.1.0"
+
+[deps]
+DataStructures = "864edb3b-99cc-5e75-8d2d-829cb0a9cfe8"
