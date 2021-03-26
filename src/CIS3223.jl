@@ -52,6 +52,9 @@ export
 
 using .Chapter5
 using .Chapter6
+export
+    lcs
+
 using .Chapter7
 using .Chapter8
 using .Chapter9
