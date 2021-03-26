@@ -30,7 +30,13 @@ export
 """
     lcs(A, B)
 
-Find the longest subsequence of two sequences `A` and `B`.
+Find the longest common subsequence of two sequences `A` and `B`.
+
+# Examples
+```jldoctest
+julia> lcs("This is a test", "This is not a test")
+"This is a test"
+```
 """
 function lcs(A, B)
     T = zeros(length(A) + 1, length(B) + 1)
