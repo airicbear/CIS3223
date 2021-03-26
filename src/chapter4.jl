@@ -35,8 +35,9 @@ import
 """
     dijkstra(G, s)
 
-Run Dijkstra's shortest path algorithm from node `s` for a graph using an adjacency list representation.
-Return the distances in the first column and previous nodes in the second column where each row represents the corresponding node.
+Run Dijkstra's shortest path algorithm from node `s` for a graph
+using an adjacency list representation. Return the distances to
+each node and their previous nodes.
 
 # Examples
 

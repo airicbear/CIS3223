@@ -31,3 +31,12 @@ Run the following commands and you're ready for development.
 using Revise
 using CIS3223
 ```
+
+## Notes
+
+- The `÷` operator is used for integer division in Julia.
+  Instead of writing `floor(Int, x)` I use `÷` to be concise.
+
+- The algorithms may take advantage of functions or data structures provided by Julia or external packages.
+
+- I am not an expert at Julia or algorithms.

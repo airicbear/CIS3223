@@ -57,7 +57,7 @@ function multiply(x::Integer, y::Integer)
         return 0
     end
 
-    z = multiply(x, floor(y ÷ 2))
+    z = multiply(x, y ÷ 2)
     if iseven(y)
         return 2z
     else
@@ -68,7 +68,7 @@ end
 """
     divide(x, y)
 
-Compute the quotient `x ÷ y`.
+Compute the quotient and remainder of `x ÷ y`.
 
 # Examples
 ```jldoctest
@@ -81,7 +81,7 @@ function divide(x::Integer, y::Integer)
         return (q,r) = (0,0)
     end
 
-    (q,r) = divide(floor(x ÷ 2), y)
+    (q,r) = divide(x ÷ 2, y)
     q = 2q
     r = 2r
     if isodd(x)
@@ -110,7 +110,7 @@ function modexp(x::Integer, y::Integer, N::Integer)
         return 1
     end
 
-    z = modexp(x, floor(y ÷ 2), N)
+    z = modexp(x, y ÷ 2, N)
     if iseven(y)
         return mod(z^2, N)
     else
@@ -131,7 +131,7 @@ julia> euclid(25, 20)
 ```
 """
 function euclid(a::Integer, b::Integer)
-    @assert a >= b && b >= 0
+    @assert a >= b >= 0
     if b == 0
         return a
     end
@@ -160,7 +160,7 @@ function extendedeuclid(a::Integer, b::Integer)
     end
 
     (x′, y′, d) = extendedeuclid(b, mod(a, b))
-    return (y′, x′ - floor(a ÷ b) * y′, d)
+    return (y′, x′ - a ÷ b * y′, d)
 end
 
 """
